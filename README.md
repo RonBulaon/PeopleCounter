@@ -28,7 +28,7 @@ Historical data are then saved on Database and displayed using Dash by Plotly mo
   <br />Fig 3: Heatmap 
 </p>
 
-More details:
+## More details:
 1. Ubuntu server and Nginx setup
 2. HTTPS setup
 3. Requirements and how to use this
