@@ -18,8 +18,8 @@ Fig 2: Backend Display that has more details.
 Historical data are then saved on Database and displayed using Dash by Plotly module. Using heatmap chart on a daily and hourly basis we’ll be able to see the occupancy trends across several days.
 
 <p align="center">
-  <img width="460" height="300" src="dashboard.gif">
-  Fig 3: Heatmap 
+  <img src="dashboard.gif">
+  <br />Fig 3: Heatmap 
 </p>
 
 ![](dashboard.gif)
