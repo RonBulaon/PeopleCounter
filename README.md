@@ -12,12 +12,12 @@ Re-configurations are made to the entrances’ people counters to send update to
 
 <p align="center">
   <img src="images/gateView.png">
-  <br />Fig 1: Used as entrance display
+  <br />Fig 1: Used at entrance display
 </p>
-
+<br />
 <p align="center">
   <img src="images/detailedView.png">
-  <br />Fig 2: Backend Display that has more details.
+  <br />Fig 2: Backend Display (More details)
 </p>
 
 Historical data are then saved on Database and displayed using Dash by Plotly module. Using heatmap chart on a daily and hourly basis we’ll be able to see the occupancy trends across several days.
@@ -29,7 +29,5 @@ Historical data are then saved on Database and displayed using Dash by Plotly mo
 
 
 
-
-Live occupancy counter with dashboard for previous data.
 
 
