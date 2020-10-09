@@ -12,27 +12,24 @@ On each of library entrances (where I currently work), there are counters at the
 Re-configurations are made to the entrances’ people counters to send update to a server every few seconds. From the server, the information is parsed, and calculations are made for the occupancy count. The information is then displayed in a browser that refreshes every few seconds as shown below: 
 
 <p align="center">
-  Fig 1: Used at entrance display <br />
-  <kbd><img width="60%" height="60%" src="images/gateView.png"></kbd>
+  <kbd><img width="60%" height="60%" src="images/gateView.png"></kbd><br/>Fig 1: Used at entrance display <br />
 </p>
 <br />
 <p align="center">
-  Fig 2: Backend Display (More details)<br />
-  <kbd><img width="60%" height="60%" src="images/detailedView.png"></kbd>
+  <kbd><img width="60%" height="60%" src="images/detailedView.png"></kbd><br />Fig 2: Backend Display (More details)<br />
 </p>
 
 Historical data are then saved on Database and displayed using Dash by Plotly module. Using heatmap chart on a daily and hourly basis we’ll be able to see the occupancy trends across several days.
 
 <p align="center">
-  <img src="images/dashboard.gif">
-  <br />Fig 3: Heatmap 
+  <img src="images/dashboard.gif"><br />Fig 3: Heatmap <br /> 
 </p>
 
 
 ## Server and Appliction Set-up Overview
 
 <p align="center">
-  <img width="90%" height="90%" src="images/diagram.png">
+  <img width="90%" height="90%" src="images/diagram.png"><br />Fig 4: Diagram <br /> 
 </p>
 
 ## More details:
