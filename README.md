@@ -29,9 +29,9 @@ Historical data are then saved on Database and displayed using Dash by Plotly mo
 </p>
 
 More details:
-[1] Ubuntu server and Nginx setup
-[2] HTTPS setup
-[3] Requirements and how to use this
+[1]: Ubuntu server and Nginx setup
+[2]: HTTPS setup
+[3]: Requirements and how to use this
 
 
 
