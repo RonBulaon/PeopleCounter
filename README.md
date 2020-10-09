@@ -32,7 +32,7 @@ Historical data are then saved on Database and displayed using Dash by Plotly mo
 ## Server and Appliction Set-up Overview
 
 <p align="center">
-  <img width="60%" height="60%" src="images/diagram.png">
+  <img width="90%" height="90%" src="images/diagram.png">
 </p>
 
 ## More details:
