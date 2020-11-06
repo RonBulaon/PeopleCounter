@@ -7,7 +7,15 @@ In response to social distancing measures during COVID-19 pandemic, it has been 
 On each of library entrances (where I currently work), there are counters at the gate that logs each entry and exits. From these logs, reports are generated on a regular basis (monthly). However, this solution does not provide a live counter that can be viewed and monitored on a near real-time basis.
 <br />
 
-## How it works:
+## The idea
+
+Despite of having a simple requirement, I realized that none of the vendors we have can provide exactly what need. Not to mention the very high cost that comes with the solution.
+
+In this regard, we decided to create our own solution. After checking our gate counters, I realized that there's a configuration to send the current count to a server via HTTP, however is it not being utilized. We played around the newly found feature/setting and set it to send update every 1 second to emulate near real-time couting.
+
+<br />
+
+## How the developed-application works:
 
 Re-configurations are made to the entrances’ people counters to send update to a server every few seconds. From the server, the information is parsed, and calculations are made for the occupancy count. The information is then displayed in a browser that refreshes every few seconds as shown below: 
 
