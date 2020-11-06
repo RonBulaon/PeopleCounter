@@ -15,7 +15,7 @@ In this regard, we decided to create our own solution. After checking our gate c
 
 <br />
 
-## How the developed-application works:
+## How it works:
 
 Re-configurations are made to the entrances’ people counters to send update to a server every few seconds. From the server, the information is parsed, and calculations are made for the occupancy count. The information is then displayed in a browser that refreshes every few seconds as shown below: 
 
