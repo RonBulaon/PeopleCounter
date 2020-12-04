@@ -42,31 +42,31 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 ## Intial Usage
 1. Clone this repository
-```
-git clone https://github.com/RonBulaon/PeopleCounter.git
-```
+  ```
+  git clone https://github.com/RonBulaon/PeopleCounter.git
+  ```
 
 2. Replace / Update the folloeing to match your environment.
-* Update the **<yourserver>** on files at public/*.html files
-* Sensor **IP address'**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
-* If you want teams notification update **[msteams]** section at **config.conf**
-* Update script **/path/to/folder/**  at **checker.py** and **stopDashboard.py**
-* Update **<local_IP>** and **<remote_IP>** IPs at **forwarder.py**
+  * Update the **<yourserver>** on files at public/*.html files
+  * Sensor **IP address'**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
+  * If you want teams notification update **[msteams]** section at **config.conf**
+  * Update script **/path/to/folder/**  at **checker.py** and **stopDashboard.py**
+  * Update **<local_IP>** and **<remote_IP>** IPs at **forwarder.py**
 
 2. Go to the downloaded repository's source folder and install the requirements.
-```
-cd LiveOccupancyCounter
- ```
+  ```
+  cd LiveOccupancyCounter
+   ```
 
-```
-pip install -r Requirements.txt
-```
+  ```
+  pip install -r Requirements.txt
+  ```
 
 3. Execute script this way:  
-```
-python3 checker.py
-python3 stopDashboard.py
-```
+  ```
+  python3 checker.py
+  python3 stopDashboard.py
+  ```
 Note : Checker.py and stop dashBoard.py would start/restart the all running scripts every execution.
 
 ## More details:
