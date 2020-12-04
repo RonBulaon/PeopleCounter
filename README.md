@@ -69,10 +69,10 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
   ```
   Note : **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
 
-## More details:
+## Not included:
 1. Ubuntu server and Nginx setup
 2. HTTPS setup
-3. Requirements and how to use this
+
 
 
 
