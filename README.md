@@ -67,7 +67,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
   python3 checker.py
   python3 stopDashboard.py
   ```
-Note : Checker.py and stop dashBoard.py would start/restart the all running scripts every execution.
+  Note : **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
 
 ## More details:
 1. Ubuntu server and Nginx setup
