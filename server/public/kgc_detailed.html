@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="refresh" content="5" />
+     <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <title>Gate Counter</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+    var url = "https://<yourserver>/public/count.json";
+
+    $.ajax({
+      method: "GET",
+      cache: false,
+      url: url,
+      success: function(data) {
+        document.getElementById('datetime').innerHTML = data.datetime;
+        document.getElementById('enter').innerHTML = data.kgc.enter;
+        document.getElementById('exit').innerHTML = data.kgc.exit;
+        document.getElementById('inside').innerHTML = data.kgc.inside;
+      },
+      error: function(error) {
+        //What do you want to do with the error?
+      },
+    });
+    </script>
+</head>
+<body class="w3-dark-grey">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- here to here -->
+  <div class="w3-row">
+    <div class="w3-col s12 w3-dark-grey "><h2 style="font-size:40px;">Kwa Geok Choo Law Library <br /> <div id="datetime">00</div></h2></div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-col m4 w3-green w3-center">
+
+      <div class="w3-row">
+        <div class="w3-col s12 w3-green w3-center">
+          <!-- enter -->
+          <h2 style="font-size:40px;">Entry Count</h2>
+          <h1 style="font-size:200px;"><div id="enter">00</div></h1>
+        </div>
+      </div>
+
+      <div class="w3-row">
+        <div class="w3-col s12 w3-blue w3-center">
+          <!-- exit -->
+          <h2 style="font-size:40px;">Exit Count</h2>
+          <h1 style="font-size:200px;"><div id="exit">00</div></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col m8 w3-red w3-center">
+      <!-- Inside -->
+      <h2 style="font-size:40px;">People Inside</h2>
+      <h1 style="font-size:460px;"><div id="inside">00</div></h1>
+    </div>
+  </div>
+  <!-- here to here -->
+
+  <!-- <div id="container">
+    <div id="datetime">NO DATA</div>
+    <div id="inside">NO DATA</div>
+    <div id="enter">NO DATA</div>
+    <div id="exit">NO DATA</div>
+  </div> -->
+
+  <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+

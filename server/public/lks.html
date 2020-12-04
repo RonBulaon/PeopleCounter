@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Live Occupancy Counter</title>
+    <style media="screen">
+      div.a {
+        font-size: 350px;
+      }
+      div.b {
+        font-size: 150px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+
+var url = "https://<yourserver>/public/count.json";
+
+    $.ajax({
+      method: "GET",
+      cache: false,
+      url: url,
+      success: function(data) {
+        document.getElementById('datetime').innerHTML = data.datetime;
+        document.getElementById('enter').innerHTML = data.lks.enter;
+        document.getElementById('exit').innerHTML = data.lks.exit;
+        document.getElementById('inside').innerHTML = data.lks.inside;
+      },
+      error: function(error) {
+        //What do you want to do with the error?
+      },
+    });
+    </script>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><h1>&nbsp; Li Ka Shing Library</h1></a>
+    <span class="navbar-text">
+      <div class="text-white"><h1>OCCUPANCY LEVEL&nbsp;</h1></div>
+    </span>
+  </nav>
+<br />
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <div id="inside" align="right" class="a">00</div>
+      </div>
+      <div class="col-sm-1 b" align="center">
+	      <br />/
+      </div>
+      <div class="col b" align='left'>
+	      <br />1000
+      </div>
+    </div>
+
+
+<div id="exit" style="display: none;">00</div>
+<div id="enter" style="display: none;">00</div>
+
+
+  <footer class="footer">
+    <h5><div id="datetime" align="center"></div></h5>
+  </footer>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
