@@ -40,10 +40,39 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
   <img width="90%" height="90%" src="images/diagram.png"><br />Fig 4: Diagram <br /> 
 </p>
 
-## More details:
+## Intial Usage
+1. Clone this repository
+  ```
+  git clone https://github.com/RonBulaon/PeopleCounter.git
+  ```
+
+2. Replace / Update the folloeing to match your environment.
+  * Update the **<yourserver>** on files at public/*.html files
+  * Sensor **IP address'**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
+  * If you want teams notification update **[msteams]** section at **config.conf**
+  * Update script **/path/to/folder/**  at **checker.py** and **stopDashboard.py**
+  * Update **<local_IP>** and **<remote_IP>** IPs at **forwarder.py**
+
+2. Go to the downloaded repository's source folder and install the requirements.
+  ```
+  cd LiveOccupancyCounter
+   ```
+
+  ```
+  pip install -r Requirements.txt
+  ```
+
+3. Execute script this way:  
+  ```
+  python3 checker.py
+  python3 stopDashboard.py
+  ```
+  Note : **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
+
+## Not included:
 1. Ubuntu server and Nginx setup
 2. HTTPS setup
-3. Requirements and how to use this
+
 
 
 
