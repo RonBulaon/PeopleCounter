@@ -43,7 +43,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 ## Intial Usage
 1. Clone this repository
   ```
-  git clone https://github.com/RonBulaon/PeopleCounter.git
+  $ git clone https://github.com/RonBulaon/PeopleCounter.git
   ```
 
 2. Replace / Update the folloeing to match your environment.
@@ -55,17 +55,14 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 2. Go to the downloaded repository's source folder and install the requirements.
   ```
-  cd LiveOccupancyCounter
-   ```
-
-  ```
-  pip install -r Requirements.txt
+  $ cd LiveOccupancyCounter
+  $ pip install -r Requirements.txt
   ```
 
 3. Execute script this way:  
   ```
-  python3 checker.py
-  python3 stopDashboard.py
+  $ python3 checker.py
+  $ python3 stopDashboard.py
   ```
   Note : 
   * **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
@@ -73,7 +70,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote. Just make sure that you have indicated the proper IP address' for remote and local.
   ```
-  python3 forwarder.py
+  $ python3 forwarder.py
   ```
 
 ## Other resources:
