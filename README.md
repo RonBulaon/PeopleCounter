@@ -34,13 +34,13 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 </p>
 
 
-## Server and Appliction Set-up Overview
+## Overview
 
 <p align="center">
   <img width="90%" height="90%" src="images/diagram.png"><br />Fig 4: Diagram <br /> 
 </p>
 
-## Intial Usage
+## Initial Usage
 1. Clone this repository
   ```
   $ git clone https://github.com/RonBulaon/PeopleCounter.git
