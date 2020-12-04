@@ -67,16 +67,19 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
   python3 checker.py
   python3 stopDashboard.py
   ```
-  Note : **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
+  Note : 
+  * **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
+  * The these scripts can be used on cron to regularly check or restart he scripts if needed.
 
 4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote. Just make sure that you have indicated the proper IP address' for remote and local.
   ```
   python3 forwarder.py
   ```
 
-## Not included:
-1. Ubuntu server and Nginx setup
-2. HTTPS setup
+## Other resources:
+1. Ubuntu on [Azure](https://azuremarketplace.microsoft.com/en/marketplace/apps/Canonical.UbuntuServer?tab=Overview)
+2. Nginx as [reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
+2. HTTPS setup through [Let's Encrypt](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
 
 
 
