@@ -76,8 +76,8 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 ## Not included:
 1. Ubuntu on [Azure](https://azuremarketplace.microsoft.com/en/marketplace/apps/Canonical.UbuntuServer?tab=Overview)
-2. Nginx as [reverse proxy] (https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
-2. HTTPS setup through [Let's Encrypt] (https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
+2. Nginx as [reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
+2. HTTPS setup through [Let's Encrypt](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
 
 
 
