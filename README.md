@@ -67,7 +67,9 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
   python3 checker.py
   python3 stopDashboard.py
   ```
-  Note : **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
+  Note : 
+  * **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
+  * The these scripts can be used on cron to regularly check or restart he scripts if needed.
 
 4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote. Just make sure that you have indicated the proper IP address' for remote and local.
   ```
