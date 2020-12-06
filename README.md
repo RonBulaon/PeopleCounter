@@ -6,7 +6,7 @@ In response to social distancing measures during COVID-19 pandemic, it has been 
 
 On each of library entrances (where I currently work), there are counters at the gate that logs each entries and exits. From these logs, reports are generated on a regular basis (monthly). However, this solution does not provide a live counter that can be viewed and monitored on a near real-time basis.
 <br />
- <br />
+<br />
 
 ## The idea
 
@@ -36,14 +36,17 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 
 <br />
+<br />
+
 ## Overview
 
 <p align="center">
   <img width="90%" height="90%" src="images/diagram.png"><br />Fig 4: Diagram <br /> 
 </p>
 
-   <br />
-   <br />
+<br />
+<br />
+   
 ## Initial Usage
 1. Clone this repository
     ```
@@ -77,27 +80,30 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
     ```
     $ python3 forwarder.py
     ```
-5. From your favorite browser opent he following:
-    a. https://<domain.com>/dashboard/
-    b. https://<domain.com>/public/lks.html
-    c. https://<domain.com>/public/kgc.html
-    d. https://<domain.com>/public/kgc_detailed.html
-    e. https://<domain.com>/public/lks_detailed.html
+5. From your favorite browser open the following for backend (*Fig 2, Fig 3*):
+     * https://<domain.com>/dashboard/
+     * https://<domain.com>/public/kgc_detailed.html
+     * https://<domain.com>/public/lks_detailed.html
     
-    URL links at a,d and e are for backend while b and c are the ones displayed on the gates through a browser. I placed the browser on auto run with the following configuration:
-    ```
-    "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://<domain.com>/public/lks.html --start-fullscreen
-    ```
+    While these on your gate display (*Fig 1*):
+     * https://<domain.com>/public/lks.html
+     * https://<domain.com>/public/kgc.html
+
     
-    or this if you have a 2nd monitor:
+     I placed the browser on auto run with the following configuration:
+     ```
+     "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://<domain.com>/public/lks.html --start-fullscreen
+     ```
+
+     or this if you want it on a 2nd monitor:
+
+     ```
+     "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://<domain.com>/public/lks.html --window-position=1925,500 --start-fullscreen
+     ```
+
+     I'm using Edge Chromium but this will also work with Google Chrome.
     
-    ```
-    "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://<domain.com>/public/lks.html --window-position=1925,500 --start-fullscreen
-    ```
-    
-    I'm using Edge Chromium but this will also work with Google Chrome.
-    
-    <br />
+<br />
 
 # Sensors
 The device we have is *Brickstreamm 2300*. It has a setting called **Real Time Data Streaming**, here's what I did:
