@@ -7,6 +7,7 @@ In response to social distancing measures during COVID-19 pandemic, it has been 
 On each of library entrances (where I currently work), there are counters at the gate that logs each entries and exits. From these logs, reports are generated on a regular basis (monthly). However, this solution does not provide a live counter that can be viewed and monitored on a near real-time basis.
 <br />
 
+
 ## The idea
 
 Despite of having a simple requirement, I realized that none of the vendors we have can provide exactly what need. Not to mention the very high cost that comes with the solution.
@@ -34,11 +35,13 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 </p>
 
 
+
 ## Overview
 
 <p align="center">
   <img width="90%" height="90%" src="images/diagram.png"><br />Fig 4: Diagram <br /> 
 </p>
+
 
 ## Initial Usage
 1. Clone this repository
@@ -79,6 +82,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
     * https://<domain.com>/public/kgc.html
     * https://<domain.com>/public/kgc_detailed.html
     * https://<domain.com>/public/lks_detailed.html
+
 
 
 # Sensors
