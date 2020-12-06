@@ -72,6 +72,12 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
   ```
   $ python3 forwarder.py
   ```
+5. From your favorite browser opent he following:
+  * https://domain.com/dashboard/
+  * https://domain.com/public/lks.html
+  * https://domain.com/public/kgc.html
+  * https:/domain.com/public/kgc_detailed.html
+  * https://domain.com/public/lks_detailed.html
 
 ## Other resources:
 1. Ubuntu on [Azure](https://azuremarketplace.microsoft.com/en/marketplace/apps/Canonical.UbuntuServer?tab=Overview)
