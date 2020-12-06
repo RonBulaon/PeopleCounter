@@ -42,42 +42,42 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 ## Initial Usage
 1. Clone this repository
-  ```
-  $ git clone https://github.com/RonBulaon/PeopleCounter.git
-  ```
+    ```
+    $ git clone https://github.com/RonBulaon/PeopleCounter.git
+    ```
 
 2. Replace / Update the folloeing to match your environment.
-  * Update the **<yourserver>** on files at public/*.html files
-  * Sensor **IP address'**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
-  * If you want teams notification update **[msteams]** section at **config.conf**
-  * Update script **/path/to/folder/**  at **checker.py** and **stopDashboard.py**
-  * Update **<local_IP>** and **<remote_IP>** IPs at **forwarder.py**
+    * Update the **<yourserver>** on files at public/*.html files
+    * Sensor **IP address'**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
+    * If you want teams notification update **[msteams]** section at **config.conf**
+    * Update script **/path/to/folder/**  at **checker.py** and **stopDashboard.py**
+    * Update **<local_IP>** and **<remote_IP>** IPs at **forwarder.py**
 
 2. Go to the downloaded repository's source folder and install the requirements.
-  ```
-  $ cd LiveOccupancyCounter
-  $ pip install -r Requirements.txt
-  ```
+    ```
+    $ cd LiveOccupancyCounter
+    $ pip install -r Requirements.txt
+    ```
 
 3. Execute script this way:  
-  ```
-  $ python3 checker.py
-  $ python3 stopDashboard.py
-  ```
+    ```
+    $ python3 checker.py
+    $ python3 stopDashboard.py
+    ```
   Note : 
-  * **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
-  * The these scripts can be used on cron to regularly check or restart he scripts if needed.
+    * **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
+    * The these scripts can be used on cron to regularly check or restart he scripts if needed.
 
 4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote. Just make sure that you have indicated the proper IP address' for remote and local.
-  ```
-  $ python3 forwarder.py
-  ```
+    ```
+    $ python3 forwarder.py
+    ```
 5. From your favorite browser opent he following:
-* https://<domain.com>/dashboard/
-* https://<domain.com>/public/lks.html
-* https://<domain.com>/public/kgc.html
-* https://<domain.com>/public/kgc_detailed.html
-* https://<domain.com>/public/lks_detailed.html
+    * https://<domain.com>/dashboard/
+    * https://<domain.com>/public/lks.html
+    * https://<domain.com>/public/kgc.html
+    * https://<domain.com>/public/kgc_detailed.html
+    * https://<domain.com>/public/lks_detailed.html
 
 ## Other resources:
 1. Ubuntu on [Azure](https://azuremarketplace.microsoft.com/en/marketplace/apps/Canonical.UbuntuServer?tab=Overview)
