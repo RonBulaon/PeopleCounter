@@ -109,7 +109,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 The device we have is *Brickstreamm 2300*. It has a setting called **Real Time Data Streaming**, here's what I did:
   1. I have set all our sensors to send realtime data to the IP address of where I have forwarder.py running.
   2. The data will be sent evey 10000 millisecond in xml format, which also means forwarder.py expects an xml data.
-  3. The counter counts continuously and will always send the total number of entry and exit from the day it was installed. Thi will later be parsed to check the difference between milliseconds to see the entry and exit counts.
+  3. The counter counts continuously and will always send the total number of entry and exit from the day it was installed. This will be parsed to check the difference between milliseconds resulting the entry and exit counts for that time.
   4. If you are using a different device you should change how I parse the received data at **forwader.py lines 56 to 78**.
 
 <br />
