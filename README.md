@@ -66,9 +66,10 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
     ```
     Note : 
       * **checker.py** and **stopDashboard.py** would start/restart the all running scripts every execution.
-      * The these scripts can be used on cron to regularly check or restart he scripts if needed.
+      * The these scripts can be used with cron to regularly check or restart the scripts if needed.
+      * YOu must move it to LiveOccupancyCounter directory to make it work properly.
 
-4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote. Just make sure that you have indicated the proper IP address' for remote and local.
+4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote device as gateway/forwarder. Just make sure that you have indicated the proper IP address' for remote and local.
     ```
     $ python3 forwarder.py
     ```
