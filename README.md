@@ -4,14 +4,14 @@
 
 In response to social distancing measures during COVID-19 pandemic, it has been imposed to limit the number of people in almost every location and educational institutions are not exempted to it. Hence the idea of counting the actual number of people inside the building became a requirement.
 
-On each of library entrances (where I currently work), there are counters at the gate that logs each entry and exits. From these logs, reports are generated on a regular basis (monthly). However, this solution does not provide a live counter that can be viewed and monitored on a near real-time basis.
+On each of library entrances (where I currently work), there are counters at the gate that logs each entries and exits. From these logs, reports are generated on a regular basis (monthly). However, this solution does not provide a live counter that can be viewed and monitored on a near real-time basis.
 <br />
 
 ## The idea
 
 Despite of having a simple requirement, I realized that none of the vendors we have can provide exactly what need. Not to mention the very high cost that comes with the solution.
 
-In this regard, we decided to create our own solution. After checking our gate counters, I realized that there's a configuration to send the current count to a server via HTTP, however is it not being utilized. We played around the newly found feature/setting and set it to send update every 1 second to emulate near real-time couting.
+We decided to create our own solution. After checking our gate counters, we found a feature that we can use to send the current count to a server via HTTP, however is it not being utilized. We played around the newly found feature/setting and set it to send update every 10000 millisecond to emulate near real-time couting.
 
 <br />
 
@@ -48,7 +48,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 2. Replace / Update the folloeing to match your environment.
     * Update the **<yourserver>** on files at public/*.html files
-    * Sensor **IP address'**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
+    * Sensor **IP addresses**, **Schedule**, **Database name** and **Database credentials** at **config.conf**
     * If you want teams notification update **[msteams]** section at **config.conf**
     * Update script **/path/to/folder/**  at **checker.py** and **stopDashboard.py**
     * Update **<local_IP>** and **<remote_IP>** IPs at **forwarder.py**
@@ -69,7 +69,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
       * The these scripts can be used with cron to regularly check or restart the scripts if needed.
       * YOu must move it to LiveOccupancyCounter directory to make it work properly.
 
-4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote device as gateway/forwarder. Just make sure that you have indicated the proper IP address' for remote and local.
+4. Run **forwarder.py** this will receive the count from sensors then forward it to port 8080 of the script above. This can be executed from same server or from remote device as gateway/forwarder. Just make sure that you have indicated the proper ports and IP addresses for remote and local.
     ```
     $ python3 forwarder.py
     ```
@@ -80,10 +80,19 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
     * https://<domain.com>/public/kgc_detailed.html
     * https://<domain.com>/public/lks_detailed.html
 
-## Other resources:
-1. Ubuntu on [Azure](https://azuremarketplace.microsoft.com/en/marketplace/apps/Canonical.UbuntuServer?tab=Overview)
-2. Nginx as [reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
-2. HTTPS setup through [Let's Encrypt](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
+
+# Sensors
+The device we have is *Brickstreamm 2300*. It has a setting called **Real Time Data Streaming**, here's what I did:
+  1. I have set all our sensors to send realtime data to the IP address of where I have forwarder.py running.
+  2. The data will be sent evey 10000 millisecond in xml format, which also means forwarder.py expects an xml data.
+  3. The counter counts continuously and will always send the total number of entry and exit from the day it was installed. Thi will later be parsed to check the difference between milliseconds to see the entry and exit counts.
+  4. If you are using a different device you should change how I parse the received data at **forwader.py lines 56 to 78**.
+
+
+# Other resources:
+  1. Ubuntu on [Azure](https://azuremarketplace.microsoft.com/en/marketplace/apps/Canonical.UbuntuServer?tab=Overview)
+  2. Nginx as [reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
+  2. HTTPS setup through [Let's Encrypt](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
 
 
 
