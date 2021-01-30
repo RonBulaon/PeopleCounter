@@ -10,7 +10,7 @@ On each of library entrances (where I currently work), there are counters at the
 
 ## The idea
 
-Despite of having a simple requirement, I realized that none of the vendors we have can provide exactly what need. Not to mention the very high cost that comes with the solution.
+Despite of having a simple requirement, I realized that none of the vendors we have can provide exactly what need. Not to mention the very high cost that comes with the partial solution they offer.
 
 We decided to create our own solution. After checking our gate counters, we found a feature that we can use to send the current count to a server via HTTP, however is it not being utilized. We played around the newly found feature/setting and set it to send update every 10000 millisecond to emulate near real-time couting.
 
