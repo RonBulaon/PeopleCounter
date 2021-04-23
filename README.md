@@ -62,7 +62,7 @@ Historical data are then saved on a Database and then displayed using Dash by Pl
 
 2. Go to the downloaded repository's source folder and install the requirements.
     ```
-    $ cd LiveOccupancyCounter
+    $ cd PeopleCounter
     $ pip install -r Requirements.txt
     ```
 
